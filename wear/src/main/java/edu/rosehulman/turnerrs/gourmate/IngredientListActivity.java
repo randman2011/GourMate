@@ -87,17 +87,18 @@ public class IngredientListActivity extends Activity implements DataApi.DataList
 
     @Override
     public void onDataChanged(DataEventBuffer dataEventBuffer) {
+        Log.d(Constants.LOG_NAME, "onDataChanged");
         for (DataEvent event : dataEventBuffer) {
             if (event.getType() == DataEvent.TYPE_CHANGED) {
                 DataItem item = event.getDataItem();
                 if (item.getUri().getPath().compareTo(Constants.WEAR_MAP_PATH) == 0) {
                     DataMap dm = DataMapItem.fromDataItem(item).getDataMap();
                     recipeTitle = dm.getString(Constants.TITLE_KEY);
-                    cookTime = dm.getString(Constants.COOK_KEY);
-                    prepTime = dm.getString(Constants.PREP_KEY);
-                    image = dm.getString(Constants.IMAGE_KEY);
-                    ingredients = dm.getStringArray(Constants.INGREDIENTS_KEY);
-                    steps = dm.getStringArray(Constants.STEPS_KEY);
+                    //cookTime = dm.getString(Constants.COOK_KEY);
+                    //prepTime = dm.getString(Constants.PREP_KEY);
+                    //image = dm.getString(Constants.IMAGE_KEY);
+                    //ingredients = dm.getStringArray(Constants.INGREDIENTS_KEY);
+                    //steps = dm.getStringArray(Constants.STEPS_KEY);
                     parseStringsIntoArrayLists();
                 }
             } else if (event.getType() == DataEvent.TYPE_DELETED) {
@@ -136,12 +137,12 @@ public class IngredientListActivity extends Activity implements DataApi.DataList
             r.setSteps(s);
         }
 
-        r.setCookTime(cookTime);
-        r.setPrepTime(prepTime);
-        r.setRecipeTitle(recipeTitle);
-        r.setImage(image);
+        //r.setCookTime(cookTime);
+        //r.setPrepTime(prepTime);
+        //r.setRecipeTitle(recipeTitle);
+        //r.setImage(image);
 
-        Constants.selectedRecipe = r;
+        //Constants.selectedRecipe = r;
 
         runOnUiThread(new Runnable() {
             @Override

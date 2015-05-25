@@ -117,11 +117,11 @@ public class ViewRecipeActivity extends ActionBarActivity implements GoogleApiCl
         protected Void doInBackground(Node... params) {
             PutDataMapRequest dataMap = PutDataMapRequest.create(Constants.WEAR_MAP_PATH);
             dataMap.getDataMap().putString(Constants.TITLE_KEY, recipe.getRecipeTitle());
-            dataMap.getDataMap().putString(Constants.PREP_KEY, recipe.getPrepTime());
-            dataMap.getDataMap().putString(Constants.COOK_KEY, recipe.getCookTime());
-            dataMap.getDataMap().putString(Constants.IMAGE_KEY, recipe.getImage());
-            dataMap.getDataMap().putStringArray(Constants.INGREDIENTS_KEY, recipe.getIngredientStringArray());
-            dataMap.getDataMap().putStringArray(Constants.STEPS_KEY, recipe.getStepStringArray());
+            //dataMap.getDataMap().putString(Constants.PREP_KEY, recipe.getPrepTime());
+            //dataMap.getDataMap().putString(Constants.COOK_KEY, recipe.getCookTime());
+            //dataMap.getDataMap().putString(Constants.IMAGE_KEY, recipe.getImage());
+            //dataMap.getDataMap().putStringArray(Constants.INGREDIENTS_KEY, recipe.getIngredientStringArray());
+            //dataMap.getDataMap().putStringArray(Constants.STEPS_KEY, recipe.getStepStringArray());
 
             PutDataRequest request = dataMap.asPutDataRequest();
 
