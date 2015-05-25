@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFF</color>
+    <color name="menu_background">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="gradient_color">#FF000000</color>
+    <color name="gradient_center_color">#CC000000</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="app_main_color">#FF0000</color>
+    <color name="app_main_dark">#C00000</color>
+    <color name="app_accent_color">#C00000</color>
+    <color name="offwhite_text">#F0F0F0</color>
+</resources>

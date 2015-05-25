@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/recipe_list_height"
+    android:background="@color/background">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recipe_image"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gradient_height"
+        android:background="@drawable/gradient_rectangle"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/times_text"
+            android:layout_marginLeft="@dimen/title_padding"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prep: 180 min"
+                android:textColor="@color/white_text"
+                android:id="@+id/prep_time_text" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/title_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cook: 5 min"
+                android:textColor="@color/white_text"
+                android:id="@+id/cook_time_text" />
+
+            </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Super Beef Diabetes Bonanza"
+            android:textColor="@color/white_text"
+            android:textSize="@dimen/title_size"
+            android:layout_marginLeft="@dimen/title_padding"
+            android:id="@+id/recipe_title"
+            android:layout_above="@id/times_text"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

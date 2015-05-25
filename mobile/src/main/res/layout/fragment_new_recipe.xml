@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.rosehulman.turnerrs.gourmate.NewRecipeFragment">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/new_recipe_scroll_view">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/thumbnail_height"
+                android:id="@+id/recipe_image_button"
+                android:src="@drawable/ic_action_new"
+                android:scaleType="centerInside"
+                android:tint="@color/offwhite_text"
+                android:background="@color/app_accent_color"
+                android:layout_marginTop="@dimen/label_horizontal_offset"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_image_button"
+                android:textColor="@color/offwhite_text"
+                android:id="@+id/add_image_label"
+                android:layout_alignBottom="@+id/recipe_image_button"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:id="@+id/title"
+                android:layout_below="@id/recipe_image_button"
+                android:layout_marginStart="@dimen/label_horizontal_offset" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset"
+                android:inputType="textCapWords"
+                android:hint="@string/title_hint"
+                android:id="@+id/title_edit_text"
+                android:layout_below="@id/title" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/time_labels_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_edit_text"
+                android:layout_marginStart="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/prep_time"
+                    android:id="@+id/prep_time_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cook_time"
+                    android:id="@+id/cook_time_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_labels_layout"
+                android:layout_marginStart="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset"
+                android:id="@+id/linearLayout">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/prep_time_hint"
+                    android:id="@+id/prep_time_edit_text"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/cook_time_hint"
+                    android:id="@+id/cook_time_edit_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingredients_list"
+                android:layout_below="@+id/linearLayout"
+                android:isScrollContainer="false"
+                android:layout_marginStart="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset"
+                android:choiceMode="singleChoice" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_ingredient_button"
+                android:background="@color/app_accent_color"
+                android:textColor="@color/offwhite_text"
+                android:id="@+id/add_ingredient_button"
+                android:layout_below="@id/ingredients_list"
+                android:layout_marginStart="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/steps_list"
+                android:layout_below="@+id/add_ingredient_button"
+                android:isScrollContainer="false"
+                android:layout_marginStart="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset"
+                android:choiceMode="singleChoice" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_step_button"
+                android:id="@+id/add_step_button"
+                android:background="@color/app_accent_color"
+                android:textColor="@color/offwhite_text"
+                android:layout_below="@id/steps_list"
+                android:layout_marginStart="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_recipe_button"
+                android:id="@+id/save_recipe_button"
+                android:background="@color/app_accent_color"
+                android:textColor="@color/offwhite_text"
+                android:layout_marginTop="@dimen/label_horizontal_offset"
+                android:layout_below="@id/add_step_button"
+                android:layout_alignEnd="@id/title_edit_text" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@android:string/cancel"
+                android:id="@+id/cancel_button"
+                android:background="@color/app_accent_color"
+                android:textColor="@color/offwhite_text"
+                android:layout_marginTop="@dimen/label_horizontal_offset"
+                android:layout_marginEnd="@dimen/label_horizontal_offset"
+                android:layout_below="@id/add_step_button"
+                android:layout_toLeftOf="@id/save_recipe_button" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

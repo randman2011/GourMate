@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="@dimen/quantity_width"
+        android:layout_height="wrap_content"
+        android:text="2 1/2"
+        android:id="@+id/quantity_text"
+        android:textSize="@dimen/regular_text_font_size"
+        android:layout_marginStart="@dimen/ingredient_margin"/>
+
+    <TextView
+        android:layout_width="@dimen/unit_width"
+        android:layout_height="wrap_content"
+        android:text="Tsp"
+        android:textSize="@dimen/regular_text_font_size"
+        android:id="@+id/units_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sugar"
+        android:textSize="@dimen/regular_text_font_size"
+        android:id="@+id/ingredient_text" />
+</LinearLayout>

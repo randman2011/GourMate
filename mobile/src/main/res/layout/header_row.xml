@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/app_main_color"
+    android:paddingTop="@dimen/header_margin"
+    android:paddingBottom="@dimen/header_margin" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Super Beef Diabetes Bonanza"
+        android:textSize="@dimen/title_size"
+        android:layout_marginLeft="@dimen/title_padding"
+        android:textStyle="bold"
+        android:textColor="@color/white_text"
+        android:id="@+id/recipe_title_text"/>
+
+    <LinearLayout
+        android:id="@+id/times_text"
+        android:layout_marginLeft="@dimen/title_padding"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prep: 180 min"
+            android:textSize="@dimen/regular_text_font_size"
+            android:textColor="@color/white_text"
+            android:id="@+id/prep_time_text" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/title_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cook: 5 min"
+            android:textSize="@dimen/regular_text_font_size"
+            android:textColor="@color/white_text"
+            android:id="@+id/cook_time_text" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
